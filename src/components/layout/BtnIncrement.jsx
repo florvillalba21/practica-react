@@ -7,7 +7,7 @@ export const BtnIncrement = () => {
   const [count, setCount] = useState(1);
 
   return (
-    <div className="container">
+    <div>
       <div>
         <h2>Contador: {count}</h2>
       </div>

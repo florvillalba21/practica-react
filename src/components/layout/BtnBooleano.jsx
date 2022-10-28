@@ -1,30 +1,27 @@
-import { useEffect , useState } from "react";
+import { useEffect, useState } from "react";
 
 export const BtnBooleano = () => {
   const [state, setState] = useState(true);
-  useEffect(()=>{
-    console.log("state", [state])
-  })
+
+  //   useEffect(() => {
+  //     console.log("state", [state]);
+  //   });
 
   return (
-    <div className="container">
-        <div>
-            <h3>
-                el estado es: {state}
-            </h3>
-        </div>
+    <div>
       <button
         className="btn btn-primary"
         type="button"
         onClick={() => {
-          (state)
-             setState(state => !state)
-            
-          
+          state ? setState(false) : setState(true);
         }}
       >
         Mostrar estado del mensaje
       </button>
+      <br />
+      <div>
+        <h2 className="display-3">{`${state}`}</h2>
+      </div>
     </div>
   );
 };
